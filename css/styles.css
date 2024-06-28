@@ -20,11 +20,11 @@ header {
     color: #ffd700;
     padding: 1rem;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 1rem;
     text-transform: uppercase;
     border-bottom: 2px solid #ffd700;
-    width: 10px;
-    height: 10px;
+    width: 10000px;
+    height: 500px;
 }
 
 main {
