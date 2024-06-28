@@ -12,11 +12,11 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    background: linear-gradient(to bottom, #1c711c, #298a51, #071109);
+    background: linear-gradient(to bottom, #1c711c, #203c2c, #071109);
 
 header {
     background: rgba(0, 0, 0, 0.8);
-    color: #ffd700;
+    color: #;
     padding: 30px;
     text-align: center;
     font-size: 1rem;
