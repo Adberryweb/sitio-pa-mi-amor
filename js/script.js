@@ -1,16 +1,38 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const heartContainer = document.querySelector('.heart-container');
-    const createHeart = () => {
-        const heart = document.createElement('div');
-        heart.classList.add('heart');
-        heart.style.left = `${Math.random() * 100}%`;
-        heart.style.animationDuration = `${Math.random() * 3 + 2}s`; // Duración entre 2 y 5 segundos
-        heartContainer.appendChild(heart);
 
-        setTimeout(() => {
-            heart.remove();
-        }, 5000); // Remueve el corazón después de 5 segundos
-    }
 
-    setInterval(createHeart, 300);
-});
+const emoji = document.querySelector('.emoji');
+// const leaps = document.querySelector('#leaps'); uncomment if you want to show number of leaps
+let y = 0;
+let vy = -6; // initial vertical velocity
+let gravity = 0.5;
+let leapcount = 0;
+
+function leap() {
+y += vy;
+vy += gravity;
+
+if (y > 160) {
+y = 160;
+vy = -6; // reset the vertical velocity
+  leapcount ++;
+  // leaps.textContent = leapcount; uncomment if you want to show number of leaps
+  if (leapcount == 5) {
+y = 160;
+vy = -9; // reset the vertical velocity
+
+} 
+  if (leapcount == 10) {
+y = 160;
+vy = -12; // reset the vertical velocity
+leapcount = 0;
+}
+}
+
+
+emoji.style.transform = `translateY(${y}px)`;
+
+requestAnimationFrame(leap);
+}
+
+leap();
+
